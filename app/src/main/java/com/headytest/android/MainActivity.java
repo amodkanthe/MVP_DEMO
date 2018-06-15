@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements CategoryContract.
         setContentView(R.layout.activity_main);
         DaggerCategoryPresenterComponent.builder()
                 .netComponent(((App) getApplicationContext()).getNetComponent())
-                .categoryContractModule(new CategoryContractModule(null))
+                .categoryContractModule(new CategoryContractModule(retrofit.create(HeadyAPI.class)))
                 .build()
                 .inject(this);
 //        categoryPresenter.setCategoryView(this);
