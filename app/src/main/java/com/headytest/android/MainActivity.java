@@ -14,18 +14,19 @@ import com.headytest.android.enities.Result;
 import com.headytest.android.retrofit_interface.HeadyAPI;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity implements CategoryContract.CategoryView {
 
+    @Inject
+    @Singleton
+    Retrofit retrofit;
 
     @Inject
     @AScope
     CategoryContract.CategoryPresenter categoryPresenter;
-
-//    @Inject
-//    Retrofit retrofit;
 
 
     @Override
@@ -33,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements CategoryContract.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         DaggerCategoryPresenterComponent.builder()
-                .categoryContractModule(new CategoryContractModule())
                 .netComponent(((App) getApplicationContext()).getNetComponent())
+                .categoryContractModule(new CategoryContractModule(null))
                 .build()
                 .inject(this);
 //        categoryPresenter.setCategoryView(this);

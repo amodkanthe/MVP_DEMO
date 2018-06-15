@@ -27,6 +27,9 @@ dependencies {
 
     compile 'com.google.dagger:dagger-android:2.16'
     compile 'com.google.dagger:dagger-android-support:2.16' // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-compiler:2.16"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'javax.inject:javax.inject:1'
    // annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
     compileOnly 'javax.annotation:jsr250-api:1.0'

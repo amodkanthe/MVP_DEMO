@@ -16,8 +16,11 @@ import retrofit2.Retrofit;
 
 public class CategoryPresenterImpl implements CategoryContract.CategoryPresenter {
 
+    HeadyAPI headyAPI;
+
     @Inject
-    public CategoryPresenterImpl() {
+    public CategoryPresenterImpl(HeadyAPI headyAPI) {
+        this.headyAPI = headyAPI;
     }
 
     @Override

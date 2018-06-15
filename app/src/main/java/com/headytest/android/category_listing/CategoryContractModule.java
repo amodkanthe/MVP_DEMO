@@ -14,14 +14,22 @@ import dagger.Provides;
 @Module
 public class CategoryContractModule {
 
+    HeadyAPI headyAPI;
 
-    public CategoryContractModule() {
+    public CategoryContractModule(HeadyAPI headyAPI) {
+        this.headyAPI = headyAPI;
     }
 
 
     @Provides
     @AScope
     CategoryContract.CategoryPresenter providesCategoryPresenter(CategoryPresenterImpl categoryPresenter) {
-        return (CategoryContract.CategoryPresenter)categoryPresenter;
+        return (CategoryContract.CategoryPresenter) categoryPresenter;
+    }
+
+    @Provides
+    @AScope
+    HeadyAPI providesHeadyAPI() {
+        return headyAPI;
     }
 }
