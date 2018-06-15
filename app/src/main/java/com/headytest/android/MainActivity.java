@@ -20,13 +20,14 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity implements CategoryContract.CategoryView {
 
-    @Inject
-    @Singleton
-    Retrofit retrofit;
 
     @Inject
     @AScope
     CategoryContract.CategoryPresenter categoryPresenter;
+
+    @Inject
+    @Singleton
+    Retrofit retrofit;
 
 
     @Override
