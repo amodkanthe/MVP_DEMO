@@ -1,7 +1,9 @@
 
 package com.headytest.android.enities;
 
+import java.util.ArrayList;
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -19,6 +21,8 @@ public class Category {
     @SerializedName("child_categories")
     @Expose
     private List<Integer> childCategories = null;
+
+    private List<Category> childCategoriesList = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -52,4 +56,11 @@ public class Category {
         this.childCategories = childCategories;
     }
 
+    public List<Category> getChildCategoriesList() {
+        return childCategoriesList;
+    }
+
+    public void setChildCategoriesList(List<Category> childCategoriesList) {
+        this.childCategoriesList = childCategoriesList;
+    }
 }

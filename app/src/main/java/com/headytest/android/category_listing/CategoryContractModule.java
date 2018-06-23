@@ -3,10 +3,12 @@ package com.headytest.android.category_listing;
 import com.headytest.android.AScope;
 import com.headytest.android.retrofit_interface.HeadyAPI;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import retrofit2.Retrofit;
 
 /**
  * Created by scandid on 6/12/2018.
@@ -14,22 +16,16 @@ import dagger.Provides;
 @Module
 public class CategoryContractModule {
 
-    HeadyAPI headyAPI;
 
-    public CategoryContractModule(HeadyAPI headyAPI) {
-        this.headyAPI = headyAPI;
+    public CategoryContractModule() {
     }
 
 
     @Provides
     @AScope
-    CategoryContract.CategoryPresenter providesCategoryPresenter(CategoryPresenterImpl categoryPresenter) {
-        return (CategoryContract.CategoryPresenter) categoryPresenter;
+    CategoryContract.CategoryPresenter providesCategoryPresenter(Retrofit retrofit) {
+        return new CategoryPresenterImpl(retrofit);
     }
 
-    @Provides
-    @AScope
-    HeadyAPI providesHeadyAPI() {
-        return headyAPI;
-    }
+
 }

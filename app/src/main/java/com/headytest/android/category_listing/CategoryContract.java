@@ -18,6 +18,8 @@ public interface CategoryContract {
 
         public void getCategoryLiast();
 
+        public void setView(CategoryView categoryView);
+
     }
 
     @AScope
