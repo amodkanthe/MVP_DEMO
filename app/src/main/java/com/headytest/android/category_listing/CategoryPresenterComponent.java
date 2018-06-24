@@ -8,7 +8,7 @@ import dagger.Component;
 import dagger.Subcomponent;
 
 /**
- * Created by scandid on 6/12/2018.
+ * Created by amod on 6/12/2018.
  */
 
 @AScope

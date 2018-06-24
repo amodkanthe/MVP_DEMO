@@ -4,7 +4,7 @@ import com.headytest.android.AScope;
 import com.headytest.android.enities.Result;
 
 /**
- * Created by scandid on 6/14/2018.
+ * Created by amod on 6/14/2018.
  */
 @AScope
 public interface CategoryContract {

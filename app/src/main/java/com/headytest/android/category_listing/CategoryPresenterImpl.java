@@ -18,7 +18,7 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
 /**
- * Created by scandid on 6/12/2018.
+ * Created by amod on 6/12/2018.
  */
 
 public class CategoryPresenterImpl implements CategoryContract.CategoryPresenter {

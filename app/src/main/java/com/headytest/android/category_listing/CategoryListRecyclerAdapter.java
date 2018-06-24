@@ -13,7 +13,7 @@ import com.headytest.android.enities.Category;
 import java.util.List;
 
 /**
- * Created by scandid on 6/21/2018.
+ * Created by amod on 6/21/2018.
  */
 
 public class CategoryListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

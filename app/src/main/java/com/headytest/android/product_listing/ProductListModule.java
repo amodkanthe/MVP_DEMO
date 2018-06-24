@@ -12,7 +12,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
- * Created by scandid on 6/24/2018.
+ * Created by amod on 6/24/2018.
  */
 @Module
 public class ProductListModule {

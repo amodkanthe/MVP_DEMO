@@ -7,7 +7,7 @@ import com.headytest.android.category_listing.FragmentListModule;
 import dagger.Component;
 
 /**
- * Created by scandid on 6/21/2018.
+ * Created by amod on 6/21/2018.
  */
 @AScope
 @Component(modules = {ProductListModule.class})

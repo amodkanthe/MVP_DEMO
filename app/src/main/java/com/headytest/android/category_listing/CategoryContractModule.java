@@ -11,7 +11,7 @@ import dagger.Provides;
 import retrofit2.Retrofit;
 
 /**
- * Created by scandid on 6/12/2018.
+ * Created by amod on 6/12/2018.
  */
 @Module
 public class CategoryContractModule {

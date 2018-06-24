@@ -11,7 +11,7 @@ import dagger.Component;
 import retrofit2.Retrofit;
 
 /**
- * Created by scandid on 9/26/2017.
+ * Created by amod on 9/26/2017.
  */
 @Singleton
 @Component(modules = {ApplicationModule.class, NetworkModule.class})

@@ -13,7 +13,7 @@ import com.headytest.android.dagger_modules.NetworkModule;
 
 
 /**
- * Created by scandid on 9/26/2017.
+ * Created by amod on 9/26/2017.
  */
 
 public class App extends Application {

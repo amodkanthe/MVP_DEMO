@@ -19,7 +19,7 @@ import java.util.List;
 
 
 /**
- * Created by scandid on 6/23/2018.
+ * Created by amod on 6/23/2018.
  */
 
 public class ProductsRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

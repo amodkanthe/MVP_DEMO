@@ -11,7 +11,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
- * Created by scandid on 5/15/2018.
+ * Created by amod on 5/15/2018.
  */
 
 public interface HeadyAPI {

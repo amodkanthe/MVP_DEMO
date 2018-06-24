@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by scandid on 6/23/2018.
+ * Created by amod on 6/23/2018.
  */
 
 public class VariantRecylerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

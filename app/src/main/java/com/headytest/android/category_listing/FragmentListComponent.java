@@ -6,7 +6,7 @@ import com.headytest.android.dagger_component.NetComponent;
 import dagger.Component;
 
 /**
- * Created by scandid on 6/21/2018.
+ * Created by amod on 6/21/2018.
  */
 @AScope
 @Component(modules = {FragmentListModule.class})

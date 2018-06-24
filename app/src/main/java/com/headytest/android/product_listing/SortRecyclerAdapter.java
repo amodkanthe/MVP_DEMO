@@ -12,7 +12,7 @@ import com.headytest.android.enities.Ranking;
 import java.util.List;
 
 /**
- * Created by scandid on 6/24/2018.
+ * Created by amod on 6/24/2018.
  */
 
 public class SortRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
