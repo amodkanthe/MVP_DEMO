@@ -38,7 +38,8 @@ public class CategoryPresenterImpl implements CategoryContract.CategoryPresenter
 
     @Override
     public void onStop() {
-
+        compositeDisposable.clear();
+        compositeDisposable.dispose();
     }
 
     @Override
@@ -67,7 +68,6 @@ public class CategoryPresenterImpl implements CategoryContract.CategoryPresenter
                         }
                         result.getCategories().removeAll(subCategories);
                         categoryView.setCategoryList(result);
-
 
 
                     }

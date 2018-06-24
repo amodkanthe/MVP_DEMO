@@ -46,7 +46,7 @@ public class VariantRecylerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         }
         float taxValue = (float) (variants.get(0).getPrice() / tax);
         float price = variants.get(0).getPrice() + taxValue;
-        variantViewHolder.tvPrice.setText("Rs. " + variantViewHolder.tvPrice.getText() + String.valueOf((int) Math.abs(price)));
+        variantViewHolder.tvPrice.setText(variantViewHolder.tvPrice.getText() + "Rs. " + String.valueOf((int) Math.abs(price)));
 
     }
 

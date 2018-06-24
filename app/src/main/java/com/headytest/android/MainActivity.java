@@ -68,6 +68,11 @@ public class MainActivity extends AppCompatActivity implements CategoryContract.
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        categoryPresenter.onStop();
+    }
 
     @Override
     public void onPreAPIRequest() {

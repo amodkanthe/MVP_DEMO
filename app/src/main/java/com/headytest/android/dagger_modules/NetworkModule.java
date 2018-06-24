@@ -14,6 +14,7 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -56,6 +57,17 @@ public class NetworkModule {
         OkHttpClient.Builder client = new OkHttpClient.Builder();
         client.cache(cache);
         client.addInterceptor(interceptor);
+        client.addInterceptor(chain -> {
+            try {
+                return chain.proceed(chain.request());
+            } catch (Exception e) {
+                Request offlineRequest = chain.request().newBuilder()
+                        .header("Cache-Control", "public, only-if-cached," +
+                                "max-stale=" + 60 * 60 * 24)
+                        .build();
+                return chain.proceed(offlineRequest);
+            }
+        });
         return client.build();
     }
 
